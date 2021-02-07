@@ -1,5 +1,5 @@
 # get_substituted_sequences
-**置換するスクリプト**
+**MiSeqなどで得られた正確な配列を、Nanoporeなどで得られた配列へマッピングし、置換するスクリプト**
 
 ## Usage
 ```
