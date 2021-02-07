@@ -60,5 +60,5 @@ class substitute:
 
 if __name__ == "__main__":
     instance = substitute(long_seq=sys.argv[1], short_seq=sys.argv[2], output_path=sys.argv[3])
-    instance.nucmer() ;instance.main() ;instance.output()
+    instance.nucmer() ;instance.main() ;instance.output() ;print('5: SUBSTITUTION HAS DONE')
     
