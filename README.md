@@ -3,7 +3,7 @@
 
 ## Usage
 ```
-python substitute.py rough_sequences.fasta accurate_sequences.fasta output_path
+python substitute.py rough_sequences.fasta accurate_sequences.fasta substituted_sequences.fasta
 ```
 - rough_sequences.fasta; Nanoporeで得られた配列など
 - accurate_sequences.fasta; MiSeqで得られた配列など
