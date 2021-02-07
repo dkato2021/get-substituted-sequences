@@ -6,7 +6,7 @@ import pandas as pd
 from Bio import SeqIO
 from Bio.Seq import Seq
 
-class substitute:
+class MySubstitute:
     def __init__(self, long_seq=None, short_seq=None, output_path=None):
         self.long_seq  = sys.argv[1]
         self.short_seq = sys.argv[2]
@@ -58,6 +58,6 @@ class substitute:
         os.system("rm filtered.coords")
 
 if __name__ == "__main__":
-    instance = substitute(long_seq=sys.argv[1], short_seq=sys.argv[2], output_path=sys.argv[3])
+    instance = MySubstitute(long_seq=sys.argv[1], short_seq=sys.argv[2], output_path=sys.argv[3])
     instance.nucmer() ;instance.main() ;instance.output() ;print('5: SUBSTITUTION HAS DONE')
     
