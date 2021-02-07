@@ -17,7 +17,6 @@ class MySubstitute:
         os.system(f"nucmer --prefix=test {self.long_seq} {self.short_seq}")
         os.system("delta-filter -q -r test.delta > filtered.delta")
         os.system("show-coords -rclT filtered.delta > filtered.coords")
-        os.system("rm test.delta filtered.delta")
         
         with open("filtered.coords") as f:
             reader = csv.reader(f.readlines()[3:], delimiter='\t')
@@ -55,7 +54,7 @@ class MySubstitute:
             self.longs[i].description=self.new_longs_id[i]
     
         SeqIO.write(self.longs, os.path.join(sys.argv[3]+'substituted_sequences.fasta'), "fasta")
-        os.system("rm filtered.coords")
+        os.system("rm test.delta filtered.delta filtered.coords")
 
 if __name__ == "__main__":
     instance = MySubstitute(long_seq=sys.argv[1], short_seq=sys.argv[2], output_path=sys.argv[3])
