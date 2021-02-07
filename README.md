@@ -1,5 +1,6 @@
 # get_substituted_sequences
 **1.MiSeqなどで得られた配列を、Nanoporeなどで得られた配列へマッピング**
+
 **2.該当箇所が置換された後者の配列を出力**
 
 ## Usage
