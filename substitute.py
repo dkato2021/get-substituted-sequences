@@ -1,6 +1,4 @@
-import os
-import sys
-import csv
+import os, sys, csv
 import numpy as np
 import pandas as pd
 from Bio import SeqIO
