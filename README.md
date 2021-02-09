@@ -3,6 +3,10 @@
 
 **2.後者の配列について、マッピング該当箇所を前者の配列で置換、出力**
 
+## installation
+```
+$ pip install -r requirements.txt
+```
 ## Usage
 ```
 python substitute.py rough_sequences.fasta accurate_sequences.fasta <output_dir>
