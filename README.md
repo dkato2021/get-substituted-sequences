@@ -9,7 +9,7 @@ $ pip install -r requirements.txt
 ```
 ## Usage
 ```
-python substitute.py rough_sequences.fasta accurate_sequences.fasta <output_dir>
+$ python substitute.py rough_sequences.fasta accurate_sequences.fasta <output_dir>
 ```
 - rough_sequences.fasta; Nanoporeで得られた配列など
 - accurate_sequences.fasta; MiSeqで得られた配列など
