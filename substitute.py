@@ -4,7 +4,7 @@ import pandas as pd
 from Bio import SeqIO
 from Bio.Seq import Seq
 
-class MySubstitute:
+class MySubstitute:        
     def __init__(self, long_seq=None, short_seq=None, output_path=None):
         self.long_seq  = sys.argv[1]
         self.short_seq = sys.argv[2]
@@ -25,7 +25,8 @@ class MySubstitute:
             self.df.append(row)
 
         self.df=pd.DataFrame(self.df, columns=self.df[0]).drop(0)\
-                            .sort_values('[S1]', ascending=True).reset_index(drop=True)       
+                            .sort_values('[S1]', ascending=True).reset_index(drop=True)
+        
     def main(self):
         self.longs = list(SeqIO.parse(self.long_seq, "fasta")) ;longs_id=[long.id for long in self.longs]
         self.new_longs_id=[long_id+'_Substituted' for long_id in longs_id]
