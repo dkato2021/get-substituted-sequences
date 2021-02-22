@@ -15,4 +15,4 @@ $ python substitute.py rough_sequences.fasta accurate_sequences.fasta <output_di
 - accurate_sequences.fasta; MiSeqで得られた配列など
 
 ## 検証
-追記予定
+置換前と置換後の2配列をアライメント、可視化する(追記予定)
