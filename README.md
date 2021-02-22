@@ -1,4 +1,4 @@
-# get substituted sequences### (最終更新日:21/02/22)
+# get substituted sequences ### (最終更新日:21/02/22)
 **1.MiSeqなどで得られた配列を、Nanoporeなどで得られた配列へマッピング**
 
 **2.後者の配列について、マッピング該当箇所を前者の配列で置換して、出力する**
