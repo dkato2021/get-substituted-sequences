@@ -1,18 +1,25 @@
-import os, sys, csv
+import os, sys, csv, argparse
 import numpy as np
 import pandas as pd
 from Bio import SeqIO
 from Bio.Seq import Seq
 
+def get_args():
+    parser = argparse.ArgumentParser() 
+    parser.add_argument('-r', '--rough', help='rough_sequences', required=True) 
+    parser.add_argument('-a', '--accurate', help='accurate_sequences', required=True) 
+    parser.add_argument('-o', '--output_dir', help='output_dir', required=True) 
+    return parser.parse_args()
+
 class MySubstitute:        
     def __init__(self, long_seq=None, short_seq=None, output_path=None):
-        self.long_seq  = sys.argv[1]
-        self.short_seq = sys.argv[2]
-        self.output_path = sys.argv[3]
+        self.long_seq  = long_seq
+        self.short_seq = short_seq
+        self.output_path = output_path
         self.df=[]
         
     def nucmer(self):
-        os.system(f"nucmer --prefix=test {self.long_seq} {self.short_seq}")
+        os.system(f'nucmer --prefix=test {self.long_seq} {self.short_seq}')
         os.system("delta-filter -q -r test.delta > filtered.delta")
         os.system("show-coords -rclT filtered.delta > filtered.coords")
         
@@ -56,6 +63,6 @@ class MySubstitute:
         os.system("rm test.delta filtered.delta filtered.coords")
 
 if __name__ == "__main__":
-    instance = MySubstitute(long_seq=sys.argv[1], short_seq=sys.argv[2], output_path=sys.argv[3])
+    args = get_args()
+    instance = MySubstitute(long_seq=args.rough, short_seq=args.accurate, output_path=args.output_dir)
     instance.nucmer() ;instance.main() ;instance.output() ;print('5: SUBSTITUTION HAS DONE')
-    
