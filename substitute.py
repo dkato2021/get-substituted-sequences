@@ -59,7 +59,7 @@ class MySubstitute:
             self.longs[i].name=self.new_longs_id[i]
             self.longs[i].description=self.new_longs_id[i]
     
-        SeqIO.write(self.longs, os.path.join(sys.argv[3]+'substituted_sequences.fasta'), "fasta")
+        SeqIO.write(self.longs, os.path.join('substituted_sequences.fasta'), "fasta")
         os.system("rm test.delta filtered.delta filtered.coords")
 
 if __name__ == "__main__":
