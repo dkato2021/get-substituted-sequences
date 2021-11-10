@@ -11,7 +11,7 @@ def get_args():
     parser.add_argument('-o', '--output_dir', help='output_dir', required=True) 
     return parser.parse_args()
 
-class MySubstitute:        
+class MySubstitute(object):        
     def __init__(self, long_seq=None, short_seq=None, output_path=None):
         self.long_seq  = long_seq
         self.short_seq = short_seq
