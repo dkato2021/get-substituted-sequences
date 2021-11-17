@@ -6,7 +6,7 @@ from Bio.Seq import Seq
 
 def get_args():
     parser = argparse.ArgumentParser() 
-    parser.add_argument('-r', '--rough', help='rough_sequences', required=True) 
+    parser.add_argument('-r', dest='rough', help='rough_sequences', required=True) 
     parser.add_argument('-a', '--accurate', help='accurate_sequences', required=True) 
     parser.add_argument('-o', '--output_dir', help='output_dir', required=True) 
     return parser.parse_args()
