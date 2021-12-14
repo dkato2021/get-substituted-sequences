@@ -65,4 +65,4 @@ class MySubstitute(object):
 if __name__ == "__main__":
     args = get_args()
     instance = MySubstitute(long_seq=args.rough, short_seq=args.accurate, output_path=args.output_dir)
-    instance.nucmer() ;instance.main() ;instance.output() ;print('5: SUBSTITUTIONS HAS BEEN DONE')
+    instance.nucmer() ;instance.main() ;instance.output() ;print('5: SUBSTITUTIONS ARE DONE')
