@@ -5,7 +5,7 @@
 
 ## Usage
 ```
-$ python substitute.py -r rough_sequences.fasta -a accurate_sequences.fasta -o <output_dir>
+$ substitute.py -r rough_sequences.fasta -a accurate_sequences.fasta -o <output_dir>
 ```
 - rough_sequences.fasta; Nanopore由来contigsなど、信用度の低い配列
 - accurate_sequences.fasta; MiSeq由来contigsなど、信用度の高い配列
