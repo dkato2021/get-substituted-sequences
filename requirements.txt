@@ -1,5 +1,0 @@
-csv==1.0
-numpy==1.19.5
-pandas==1.1.5
-biopython==1.78
-mummer==3.23
