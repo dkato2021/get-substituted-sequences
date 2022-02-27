@@ -3,9 +3,6 @@
 
 **2.配列Bについてマッピング該当箇所を配列Aで置換してB'を出力する**
 
-## installation
-```
-$ pip install -r requirements.txt #condaでのinstallも可
 ```
 ## Usage
 ```
